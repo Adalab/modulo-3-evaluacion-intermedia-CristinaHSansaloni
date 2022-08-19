@@ -8,12 +8,16 @@ function App() {
 
   //Variables de estado
   const [data, setData] = useState(friends);
+  const [search,setSearch] = useState("");
   const [newQuote, setNewQuote] = useState({
     quote: "",
     character: ""
   });
 
 
+  const handleSearch = (ev) => {
+    setSearch(ev.target.value);
+  }
 
   const handleNewQuote = (ev) => {
     setNewQuote({
@@ -35,6 +39,9 @@ function App() {
 
 //render
   const htmlData = data
+  .filter((friend) => {
+    return friend.quote.toLocaleLowerCase().includes(search.toLocaleLowerCase());
+  })
   .map((friend, index) =>{
     return (
       <li key={index}>
@@ -48,6 +55,28 @@ function App() {
       <div>
           <header>
             <h1>Frases de Friends</h1>
+            <form>
+              <label>Filtrar por frase</label>
+              <input 
+              autoComplete='off'
+              type="search"
+              name="search"
+              value={search}
+              onChange ={handleSearch}></input>
+              <label>Filtrar por personaje</label>
+              <select name="Todos"
+              value={search}
+              onChange ={search}>
+
+                <option>Ross</option>
+
+                <option>Mónica</option>
+
+                <option>Rachel</option>
+                
+
+                </select>
+            </form>
           </header>
 
           <main>
