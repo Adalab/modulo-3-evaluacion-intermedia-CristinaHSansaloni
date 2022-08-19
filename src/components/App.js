@@ -7,11 +7,38 @@ function App() {
 
   //Variables de estado
   const [data, setData] = useState(friends);
+
+
+
+
+
+
+//render
+  const htmlData = data
+  .map((friend, index) =>{
+    return (
+      <li key={index}>
+        <p>{friend.quote}</p>
+        <p>{friend.character}</p>
+      </li>
+    )
+  });
+
   return (
-    <header>
+<div>
+<header>
       <h1>Frases de Friends</h1>
     </header>
-  );
+
+    <main>
+      <ul>
+        {htmlData}
+      </ul>
+    </main>
+</div>
+ )
+
+
 }
 
 export default App;
