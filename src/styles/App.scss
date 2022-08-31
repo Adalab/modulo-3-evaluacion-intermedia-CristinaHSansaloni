@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+.page {
+    padding: 1rem;
+    background-color: #fbfbfb;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  
+}
+ul {
+    list-style-type: none;
+
+}
+li {
+    position: relative;
+    width: 80vw;
+    margin: 0 1rem 1rem 1rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #fcbc0c;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+
+    &__title {
+        font-size: 2.5rem;
+        
+    }
+    &__img {
+        width: 205px;
+        padding: 20px 0 0 17px;
+    }
+
+}
+.quotes__list {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 50px 50px 50px;
+    
+
+}
+.filter {
+    display: flex;
+    flex-direction: column;
+
+    &__label{
+        padding-bottom: 15px;
+    }
+    &__input {
+        padding: 0px 15px 0px 15px;
+        margin: 0px 50px 0px 10px;
+        border: 2px solid  #04b4eb;
+    }
+    &__select {
+        padding: 0px 10px 0px 5px;
+        margin: 0px 50px 0px 10px;
+        border: 2px solid  #04b4eb;
+    }
+}
+.new-quote {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 50px 100px 100px 100px;
+    &__title {
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #ddd;
+        font-size: 1.3rem;
+    }
+    &__label {
+        padding-top: 15px; 
+        width: 100px;
+        
+     }
+     &__text {
+        padding: 0px 15px 0px 15px;
+        margin: 0px 50px 0px 10px;
+        border: 2px solid  #04b4eb;
+     }
+     &__btn {
+        padding: 5px;
+        background-color: #04b4eb;
+        border: none;
+        color: white;
+        margin-top: 15px;
+     }
+}
+
+
+
